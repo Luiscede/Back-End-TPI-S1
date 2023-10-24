@@ -1,0 +1,37 @@
+header{
+    background-color: #68e2f2;
+}
+footer{
+    background-color: #97D8DE;
+}
+.fondo-opaco {
+    background-color: gray;
+    opacity: 0.5;
+  }
+
+.img-logo{
+    width: 50px;
+    border-radius: 50px;
+}
+
+.img-tam{
+width:100%;
+height:500px;
+}
+
+.header-carrusel{
+color: #bd3719;
+}
+
+.short-text-carrusel{
+color: #bd3719;
+}
+
+
+.header-carrusel2{
+color: #bd3719;
+}
+
+.short-text-carrusel2{
+color: #bd3719;
+}

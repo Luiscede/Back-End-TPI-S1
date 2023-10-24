@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Cars</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div>
+
+          <a class="navbar-brand" href="index.html">Digital Cars</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                 aria-expanded="false">
+                Autos
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="post-cars.html">Registrar Auto</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="funciones-cars.html">Listar Autos</a>
+                </li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="container my-5">
+  <ul class="nav nav-pills justify-content-end bg-success bg-opacity-10 p-2 rounded">
+    <li class="nav-item">
+      <a class="nav-link text-dark" href="post-cars.html">Agregar nuevo auto</a>
+    </li>
+  </ul>
+
+  <div class="bg-success bg-opacity-10 p-4 rounded mt-5">
+    <div id="div_car_table" class="text-center">
+      <h2 class="mb-4">Listado de Autos</h2>
+
+      <div class="row justify-content-center ">
+        <div class="row col-md-6 table-responsive font-monospace ">
+          <table id="carTable" class="table table-striped table-hover ">
+            <thead>
+            <tr>
+              <th>Modificar</th>
+              <th>Marca</th>
+              <th>Modelo</th>
+              <th>Patente</th>
+              <th>Eliminar</th>
+            </tr>
+            </thead>
+            <tbody id="carTableBody">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<section class="container">
+  <div class="row justify-content-center">
+    <div class="col-sm-6" style="display: none; padding:10px; border-radius:3px" id="div_paciente_updating">
+      <form id="update_car_form" class="bg-success bg-opacity-10 p-2">
+        <div class="form-group">
+          <label>Id:</label>
+          <input type="text" class="form-control " id="car_id" readonly>
+        </div>
+        <div class="form-group row">
+          <div class="form-group col-md-6">
+            <label for="marca" class="control-label">Marca</label>
+            <input type="text" class="form-control" id="marca" placeholder="marca" name="marca"
+                   required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="modelo" class="control-label">modelo</label>
+            <input type="text" class="form-control" id="modelo" placeholder="modelo" name="modelo"
+                   required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="form-group col-md-6">
+            <label for="anioModelo" class="control-label">Año Modelo</label>
+            <input type="number" class="form-control" id="anioModelo" placeholder="año del auto" name="anioModelo"
+                   required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="patente" class="control-label">patente</label>
+            <input type="text" class="form-control" id="patente" placeholder="patente del auto" name="patente" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="motorCode" class="control-label">serial de motor</label>
+            <input type="text" class="form-control" id="motorCode" placeholder="serial del motor del auto" name="motorCode" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="fechaIngreso" class="control-label">Fecha de ingreso</label>
+            <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" required>
+            <div class="text-center mt-3">
+              <button type="submit" class="btn btn-secondary">Modificar</button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div id="response" style="display:none; margin:10px">
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+<footer class="text-center">
+  Digital Cars
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/get_car.js"></script>
+<script type="text/javascript" src="/js/update_car.js"></script>
+<script type="text/javascript" src="/js/delete_car.js"></script>
+</body>
+
+</html>
