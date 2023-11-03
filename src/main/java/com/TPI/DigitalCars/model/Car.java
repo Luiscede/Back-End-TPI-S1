@@ -34,13 +34,16 @@ public class Car {
     @Column
     private LocalDate fechaIngreso;
 
-    @Column
+@Column
     @Lob
     @Basic(fetch = FetchType.LAZY)
     private Blob imagen;
 
 
-    public Car(Long id, String marca, String modelo,int anioModelo, String patente, String motorCode, LocalDate fechaIngreso, Blob imagen) {
+
+
+
+    public Car(Long id, String marca, String modelo, int anioModelo, String patente, String motorCode, LocalDate fechaIngreso, Blob imagen) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
@@ -64,5 +67,6 @@ public class Car {
 
     public Car() {
     }
+
 
 }
