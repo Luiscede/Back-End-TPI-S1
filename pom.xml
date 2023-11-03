@@ -46,7 +46,13 @@
 			<artifactId>log4j</artifactId>
 			<version>1.2.17</version>
 		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.28</version> <!-- Debes especificar la versión que desees -->
+		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>
