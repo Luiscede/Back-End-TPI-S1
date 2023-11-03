@@ -39,6 +39,12 @@ public class CarController {
     }
 
 
+    @GetMapping("/{id}")
+    public ResponseEntity<Optional> getCarById(@PathVariable Long id) {
+        Optional<Car> car = carService.buscarCar(id);
+        System.out.println(car);
+        return ResponseEntity.ok().body(car);
+    }
 
     /*
     @PostMapping("/crear")
