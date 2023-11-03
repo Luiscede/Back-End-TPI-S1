@@ -47,6 +47,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.28</version> <!-- Debes especificar la versión que desees -->
 		</dependency>
+
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+			<version>2.0.2</version>
+		</dependency>
 	</dependencies>
 
 

@@ -7,6 +7,8 @@ import java.sql.Blob;
 
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Getter
 @Setter
@@ -34,10 +36,18 @@ public class Car {
     @Column
     private LocalDate fechaIngreso;
 
-@Column
+    @Column
     @Lob
     @Basic(fetch = FetchType.LAZY)
     private Blob imagen;
+
+    // Agregar la propiedad imagenes como una lista de imagen
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Imagen> imagenes = new ArrayList<>();
+
+
+
+
 
 
 

@@ -13,6 +13,8 @@ public class DigitalCarsApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(DigitalCarsApplication.class, args);
+
+
 	}
 
 }
