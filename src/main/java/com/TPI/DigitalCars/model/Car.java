@@ -46,6 +46,12 @@ public class Car {
     private List<Imagen> imagenes = new ArrayList<>();
 
 
+    @ManyToMany
+    @JoinTable(
+            name = "car_category",
+            joinColumns = @JoinColumn(name = "car_id"),
+            inverseJoinColumns = @JoinColumn(name = "category_id"))
+    private List<Category> categories = new ArrayList<>();
 
 
 
