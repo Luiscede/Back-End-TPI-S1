@@ -1,6 +1,7 @@
 package com.TPI.DigitalCars.controller;
 
 
+import com.TPI.DigitalCars.dto.CarDTO;
 import com.TPI.DigitalCars.exceptions.BadRequestException;
 import com.TPI.DigitalCars.exceptions.ResourceNotFoundException;
 import com.TPI.DigitalCars.model.Car;
@@ -32,10 +33,11 @@ public class CarController {
 
 
     @PostMapping
-    public ResponseEntity<Car> guardarPaciente(@RequestBody Car car) {
-
-
-        return ResponseEntity.ok(carService.guardarCar(car));
+    public ResponseEntity<Car> guardarAuto(@RequestBody CarDTO carDTO) {
+        System.out.println("inicio carDTO ------------ ---- ------ ------------");
+        System.out.println(carDTO);
+        System.out.println("fin carDTO ------------ ---- ------ ------------");
+        return ResponseEntity.ok(carService.guardarCar(carDTO));
     }
 
 

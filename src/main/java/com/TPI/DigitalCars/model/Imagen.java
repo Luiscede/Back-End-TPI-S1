@@ -19,9 +19,6 @@ public class Imagen {
 
     private String url;
 
-    // Agregar una referencia a la entidad Car a la que pertenece la imagen
-    @ManyToOne
-    @JoinColumn(name = "car_id")
-    private Car car;
+
 
 }

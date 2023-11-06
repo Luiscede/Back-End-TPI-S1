@@ -1,13 +1,20 @@
 package com.TPI.DigitalCars.service;
 
 
+import com.TPI.DigitalCars.dto.CarDTO;
+import com.TPI.DigitalCars.dto.CategoryDTO;
 import com.TPI.DigitalCars.exceptions.BadRequestException;
 import com.TPI.DigitalCars.exceptions.ResourceNotFoundException;
 import com.TPI.DigitalCars.model.Car;
+import com.TPI.DigitalCars.model.Category;
+import com.TPI.DigitalCars.model.Imagen;
 import com.TPI.DigitalCars.repository.CarRepository;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -16,7 +23,8 @@ public class CarService {
 
     @Autowired
     private CarRepository CarRepository;
-
+    @Autowired
+    ObjectMapper mapper;
     public List<Car> listarCars(){
         return CarRepository.findAll();
     }
@@ -26,9 +34,16 @@ public class CarService {
         return CarRepository.findById(id);
     }
 
-    public Car guardarCar(Car car){
+
+    public Car guardarCar(CarDTO carDTO){
+
+        Car car = mapper.convertValue(carDTO,Car.class);
+
+        System.out.println(car);
+        car.setFechaIngreso(LocalDate.now());
         return CarRepository.save(car);
     }
+
 
     public Car actualizarCar (Car car)throws BadRequestException {
 
@@ -39,6 +54,8 @@ public class CarService {
         }
 
     }
+
+
 
     public void eliminarCar(Long id) throws ResourceNotFoundException {
         Optional<Car> car = buscarCar(id);
