@@ -35,7 +35,7 @@ public class CarController {
     @PostMapping
     public ResponseEntity<Car> guardarAuto(@RequestBody CarDTO carDTO) {
         System.out.println("inicio carDTO ------------ ---- ------ ------------");
-        System.out.println(carDTO);
+        System.out.println(carDTO.toString());
         System.out.println("fin carDTO ------------ ---- ------ ------------");
         return ResponseEntity.ok(carService.guardarCar(carDTO));
     }
