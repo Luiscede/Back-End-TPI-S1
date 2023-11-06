@@ -1,7 +1,13 @@
 package com.TPI.DigitalCars.service;
 
+import com.TPI.DigitalCars.model.Category;
 import com.TPI.DigitalCars.repository.CategoryRepository;
+import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.Optional;
+
+@Service
 public class CategoryService {
     private final CategoryRepository categoryRepository;
 
