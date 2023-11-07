@@ -3,17 +3,11 @@ package com.TPI.DigitalCars.controller;
 
 import com.TPI.DigitalCars.dto.CarDTO;
 import com.TPI.DigitalCars.exceptions.BadRequestException;
-import com.TPI.DigitalCars.exceptions.ResourceNotFoundException;
 import com.TPI.DigitalCars.model.Car;
 import com.TPI.DigitalCars.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.multipart.MultipartFile;
-import java.sql.Blob;
-import javax.sql.rowset.serial.SerialBlob;
-
 
 import java.util.List;
 import java.util.Optional;
@@ -58,7 +52,7 @@ public class CarController {
 
 
 
-    //---------------------------------GET LISTAR PACIENTE ----------------------------------------------
+    //---------------------------------GET LISTAR auto ----------------------------------------------
     @GetMapping("/listar")
     public ResponseEntity<List<Car>> listarCars() throws BadRequestException {
         List<Car> cars = carService.listarCars();

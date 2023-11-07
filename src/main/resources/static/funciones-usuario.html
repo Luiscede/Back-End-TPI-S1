@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Digital Cars</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <div>
+
+          <a class="navbar-brand" href="index.html">Digital Cars</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+
+
+
+              <ul class="dropdown-menu">
+
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/logout">Cerrar sesión</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<section class="container my-5">
+  <ul class="nav nav-pills justify-content-end bg-success bg-opacity-10 p-2 rounded">
+
+  </ul>
+
+  <div class="bg-success bg-opacity-10 p-4 rounded mt-5">
+    <div id="div_car_table" class="text-center">
+      <h2 class="mb-4">Datos de usuario</h2>
+
+      <div class="row justify-content-center ">
+        <div class="row col-md-6 table-responsive font-monospace ">
+          <table id="userTable" class="table table-striped table-hover ">
+            <thead>
+            <tr>
+              <th>NOMBRE</th>
+              <th>APELLIDO</th>
+              <th>EMAIL</th>
+              <th>CONTRASEÑA</th>
+              <th>RESERVA</th>
+            </tr>
+            </thead>
+            <tbody id="userTableBody">
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+<footer class="text-center">
+  Digital Cars
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="/js/get_usuario.js"></script>
+<script type="text/javascript" src="/js/get_car.js"></script>
+<script type="text/javascript" src="/js/get_car.js"></script>
+<script type="text/javascript" src="/js/update_car.js"></script>
+<script type="text/javascript" src="/js/delete_car.js"></script>
+</body>
+
+</html>
